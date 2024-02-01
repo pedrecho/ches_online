@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package connection.v1;
+
+option go_package = "pb/connection";
+
+service ConnectionService {
+  rpc connect(ReqPlayer) returns (ResPlayer);
+}
+
+message ReqPlayer {
+  string name = 1;
+}
+
+message ResPlayer {
+  string name = 1;
+}
